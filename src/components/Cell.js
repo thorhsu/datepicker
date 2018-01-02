@@ -19,6 +19,7 @@ const Cell = ({
             onClickFunction = function () {};
           } else {
             className = 'day';
+            onClickFunction = setInputDate;
           }
           if (hasToday) {
             const todayDate = new Date().getDate();
