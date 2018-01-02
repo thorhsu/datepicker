@@ -69,7 +69,6 @@ export default (state = initialState, action) => {
   const month = cloneState.month;
   const year = cloneState.year;
   const currentDate = new Date();
-  cloneState.hasToday = true;
   let newDate;
   switch (action.type) {
     case 'SET_MONTH':
