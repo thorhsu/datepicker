@@ -121,6 +121,9 @@ export default (state = initialState, action) => {
     case 'SET_INPUT_DATE':
       cloneState.selectedDate = `${cloneState.year}/${cloneState.month + 1}/${action.selectedDate}`;
       return cloneState;
+    case 'CHANGE_DATE':
+      cloneState.selectedDate = action.selectedDate;
+      return cloneState;
     default:
       return state;
   }

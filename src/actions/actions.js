@@ -18,6 +18,12 @@ function mapDispatchToProps(dispatch) {
         selectedDate: e.target.childNodes[0].nodeValue,
       });
     },
+    changeDate: (e) => {
+      dispatch({
+        type: 'CHANGE_DATE',
+        selectedDate: e.target.value,
+      });
+    },
     makeCalenderVisible: (e) => {
       const x = e.clientX;
       const y = e.clientY;

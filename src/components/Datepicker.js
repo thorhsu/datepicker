@@ -6,11 +6,12 @@ import './Datepicker.css';
 import { mapStateToProps, mapDispatchToProps } from '../actions/actions';
 
 const Datepicker = ({
-  showCal, x, y, makeCalenderVisible, selectedDate,
+  showCal, x, y, makeCalenderVisible, selectedDate, changeDate,
 }) => (
   <div className="row">
     <div className="input-group date col-xs-4">
-        <input type="text" className="form-control" value={selectedDate}/>
+        <input type="text" className="form-control" value={selectedDate}
+        onChange={e => changeDate(e)} />
         <span className="input-group-addon" onClick={e => makeCalenderVisible(e)}>
           <span className="glyphicon glyphicon-calendar"></span>
         </span>
